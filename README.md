@@ -114,6 +114,6 @@ Quick Summary for the four launchMode
 ```
 
 The summary description from original android documentation.
-![Alt launchMode](/doc/launchMode.JPG?raw=true "Android launchMode")
+![Alt launchMode](/doc/launchMode.png?raw=true "Android launchMode")
 
 
