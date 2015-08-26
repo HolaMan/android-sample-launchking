@@ -3,10 +3,13 @@ Learn the four kinds of launchMode of Activity. standard, singleTop, singleTask,
 
 For original documentation, please refers to [Android launchMode Documentation](http://developer.android.com/guide/topics/manifest/activity-element.html#lmode)
 
-A stands for standard
-B stands for singleTop
-C stands for singleTask
-D stands for singleInstance
+A stands for **standard**
+
+B stands for **singleTop**
+
+C stands for **singleTask**
+
+D stands for **singleInstance**
 
 A1 stands for standard but with different taskAffinity
 
