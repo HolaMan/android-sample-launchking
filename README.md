@@ -1,9 +1,18 @@
 # android-sample-launchking
 Learn the four kinds of launchMode of Activity. standard, singleTop, singleTask, and singleInstance. Directly learn and experience the difference of launchMode by playing the apps
 
+A stands for standard
+B stands for singleTop
+C stands for singleTask
+D stands for singleInstance
+
+A1 stands for standard but with different taskAffinity
+
 please use commands to observe the task stack status below
 
-## clear; adb shell dumpsys activity package com.holasoft.launchking
+```
+clear; adb shell dumpsys activity package com.holasoft.launchking
+```
 
 There's sample below for the reference
 
