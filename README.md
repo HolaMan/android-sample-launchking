@@ -51,3 +51,63 @@ ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
           ProcessRecord{43e578e8 32258:com.holasoft.launchking/u0a434}
 ```
 
+Quick Summary for the four launchMode
+
+
+* standard
+	multiple instance
+
+* singleTop
+	pretty much the same to standard, but the activity would be reused if it's on the top of task. (but also receive a onNewIntent)
+
+* singleTask
+	Single instance but allow different activities within the same task stack.
+	If the same activity intent triggered which the same activity created below, the activity will levearge to the top and clear up all activities above.
+	For example, let C stands for singleTask
+```
+	before --> A C B A B
+
+	another intent C invoked
+
+	after --> A C
+
+	the activities are clear above C. Only one instance of C would exist
+
+```
+
+* singleInstnace
+	Single instance and the only activity in the task.
+	For example, let D stands for singleInstance
+
+```
+	before --> [Task #1]	A C B
+
+	intent D invoked
+
+	then -->
+
+		[Task #2] D
+
+		[Task #1] A C B
+
+	intent A invoked
+
+	then --> 
+
+		[Task #1] A C B A
+
+		[Task #2] D
+
+	because A, B, C have the same taskAffinity (default), so all will be in the same task stack
+
+	intent C invoked (C stands for singleTask)
+
+	then --> 
+
+		[Task #1] A C
+
+		[Task #2] D
+
+	clear activities above C because it's singleTask
+```
+
