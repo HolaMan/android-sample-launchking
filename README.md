@@ -1,6 +1,8 @@
 # android-sample-launchking
 Learn the four kinds of launchMode of Activity. standard, singleTop, singleTask, and singleInstance. Directly learn and experience the difference of launchMode by playing the apps
 
+For original documentation, please refers to [Android launchMode Documentation](http://developer.android.com/guide/topics/manifest/activity-element.html#lmode)
+
 A stands for standard
 B stands for singleTop
 C stands for singleTask
@@ -110,4 +112,8 @@ Quick Summary for the four launchMode
 
 	clear activities above C because it's singleTask
 ```
+
+The summary description from original android documentation.
+![Alt launchMode](/doc/launchMode.JPG?raw=true "Android launchMode")
+
 
